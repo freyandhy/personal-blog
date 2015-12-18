@@ -1,11 +1,9 @@
-@if (count($errors) > 0)
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li></li>
-            @endforeach
-        </ul>
-    </div>
+@if ($errors->any())
+    <ul class="alert alert-danger">
+    @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+    @endforeach
+    </ul>
 @endif
 
 <form method="POST" action="/auth/register">
@@ -17,8 +15,8 @@
     </div>
 
     <div>
-        Email
-        <input type="email" name="email" value="">
+        Username
+        <input type="text" name="username" value="">
     </div>
 
     <div>
