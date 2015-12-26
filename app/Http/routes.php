@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 // Dashboard routes
 Route::get('dashboard', 'DashboardController@index');
@@ -21,8 +19,12 @@ Route::get('dashboard', 'DashboardController@index');
 
 // Article routes
 Route::get('article', 'ArticleController@index');
-Route::get('article/create', 'ArticleController@create');
-Route::post('article/store', 'ArticleController@store');
+// Route::get('article/create', 'ArticleController@create');
+Route::post('article', 'ArticleController@store');
+
+// Post routes
+Route::get('post/', 'ArticleController@show');
+Route::get('post/{id}', 'ArticleController@show');
 
 // Category routes
 Route::get('category', 'CategoryController@index');

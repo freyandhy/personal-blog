@@ -16,10 +16,11 @@
     <meta name="msapplication-TileImage" content="{{ url('assets/images/favicon/mstile-144x144.png') }}">
     <!-- For Windows Phone -->
 
-
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CORE CSS-->    
     <link href="{{ url('assets/css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="{{ url('assets/css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{{ url('assets/css/palette.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
 
 
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->    

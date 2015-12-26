@@ -40,6 +40,7 @@
 			</div>
 		</div>
 	</div>
+	@include('tinymce::tpl')
 	<div class="col s6 m6 l6">
 		<div class="card-panel">
 			<h4 class="header2">Create New Article</h4>
@@ -53,13 +54,12 @@
 					</div>
 					<div class="row">
 						<div class="input-field col s12">
-							{!! Form::textarea('body',null,['class' => 'materialize-textarea']) !!}
-							{!! Form::label('body','Body') !!}
+							{!! Form::textarea('body',null,['id' => 'tinymce']) !!}
 						</div>
 					</div> 
 					<div class="row">
 						<div class="input-field col s12">
-							{!! Form::button('Create <i class="mdi-content-send right"></i>', ['type' => 'submit','class' => 'btn light-green darken-2 waves-effect waves-light right']) !!}	
+							{!! Form::button('Create <i class="mdi-content-send right"></i>', ['type' => 'submit','class' => 'btn amber darken-2 waves-effect waves-light right']) !!}	
 						</div>
 					</div>
 				{!! Form::close() !!}		
